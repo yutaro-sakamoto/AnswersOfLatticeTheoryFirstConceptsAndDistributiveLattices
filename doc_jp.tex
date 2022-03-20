@@ -1,0 +1,57 @@
+\documentclass{jsarticle}
+%
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{ascmac}
+
+\newcommand{\todayAD}{\number\year 年\number\month 月\number\day 日}
+
+%
+\setlength{\textwidth}{\fullwidth}
+\setlength{\textheight}{39\baselineskip}
+\addtolength{\textheight}{\topskip}
+\setlength{\voffset}{-0.5in}
+\setlength{\headsep}{0.3in}
+
+\pagestyle{myheadings}
+\markright{\footnotesize \sf \texttt{ 『Lattice Theory: First Concepts and Distributive Lattices』演習問題解答集}}
+
+\title{『Lattice Theory: First Concepts and Distributive Lattices』演習問題解答集}
+\author{坂本 優太郎}
+\date{\todayAD}
+
+\begin{document}
+
+\maketitle
+\clearpage
+
+\section*{はじめに}
+本文書には,束論の入門書『Lattice Theory: First Concepts and Distributive Lattices』の演習問題の解答を掲載します.
+この本には膨大な演習問題があるものの解答が一切掲載されていないため,筆者の学習を兼ねて順次解答を作成して公開することとしました.
+修正点や改善点がありましたら,GitHubリポジトリ(https://github.com/yutaro-sakamoto/AnswersOfLatticeTheoryFirstConceptsAndDistributiveLattices)にIssueやPull Requestを送るか,
+yutaro-sakamoto@yutaro-sakamoto.com にメールを送ってください.「謝辞」や共著者への掲載をご希望の方は,お名前や連絡先を明記してください.
+また,著作権に関する確認が取れるまでは問題文の掲載は行わず,筆者が作成した解答のみを掲載することとします.\par
+本文書が束論を学ぶ皆様の一助となれば幸いです.
+\clearpage
+
+\tableofcontents
+\clearpage
+
+\section{Section1の解答}
+\subsection{問題3}
+$n$に関する数学的帰納法で示す.\par
+$n=1$のときは明らか.\par
+$n=2$のときも順序集合の反対称律より明らか.\par
+$n=k$のとき成立すると仮定する.つまり,
+「順序集合$L$の元$x_0, x_1, \dots, x_{k-1}$について,$x_0 \leq x_1 \leq \cdots \leq x_{k-1} \leq x_0$ ならば
+$x_0 = x_1 = \cdots = x_{k-1}$」が成り立つとする.
+今,順序集合$L$の元$y_0, y_1, \dots, y_{k-1}, y_k$について
+$y_0 \leq y_1 \leq \cdots \leq y_{k-1} \leq y_k \leq y_0$が成り立つとする.
+このとき当然,「$y_0 \leq y_1 \leq y_2 \leq \cdots \leq y_{k-1} \leq y_0$」と
+「$y_0 \leq y_2 \leq y_3 \leq \cdots \leq y_{k-1} \leq y_k \leq y_0$」が成り立つ.
+帰納法の仮定により,それぞれ「$y_0 = y_1 = y_2 = \cdots = y_{k-1}$」と
+「$y_0 = y_2 = y_3 = \cdots = y_{k-1} = y_k$」を得る.以上より,
+「$y_0 = y_1 = \cdots = y_{k-1} = y_k$」を得る.したがって,$n=k+1$のときも成り立つ.\par
+数学的帰納法により,証明された.
+\end{document}
